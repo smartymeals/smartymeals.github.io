@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/securev1/repositories/smartymealshub 
+    - /bin/cp -R * $DEPLOYPATH
