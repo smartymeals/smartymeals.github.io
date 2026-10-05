@@ -6,5 +6,10 @@
 
 ### Jumbo Size
 - Beef or Chicken
-- 2 hotdog
-- '#x,xxx'
+- 3 hotdog
+- #x,xxx
+
+### large Size
+- Beef or Chicken
+- 2 hotdogs
+- #x,xxx
