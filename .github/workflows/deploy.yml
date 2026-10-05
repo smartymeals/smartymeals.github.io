@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 #Only fetch the last 2 commits to reduce the amount of data transferred
 
       - name: Sync files to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -20,3 +22,13 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: ./repositories/smartymealshub/
+          exclude: | #Add README.md
+            **/.git*
+            **/.git*/**
+            .github*
+            .vscode*
+            .DS_Store
+            **/node_modules/**
+            **/vendor/**
+            deploy.yml
+            .env
